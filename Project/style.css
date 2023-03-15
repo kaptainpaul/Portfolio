@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+:root{
+    /* CSS HEX */
+    --timberwolf: #D8D8D8ff;
+    --alabaster: #F1EFE8ff;
+    --white: #FFFFFFff;
+    --selective-yellow: #FEBA31ff;
+    --xanthous: #EEB949ff;
+}
+html{
+    font-size: 60.5%;
+}
+body{
+    background-color: var(--timberwolf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition: .2s ease-in-out;
+}
+@font-face {
+    font-family: 'MarketFreshInlineBold';
+    src: url('fonts/Market\ Fresh\ Inline\ Bold.ttf');
+}
+
+
+/* INTRO PAGE*/
+#intro-page{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+.intro-page-section{
+    width: 50%;
+}
+#introduction{
+    padding: 0 4.5rem 0 15rem;
+}
+#introduction h2{
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+#introduction h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+#introduction h1 span{
+    font-family: 'MarketFreshInlineBold';
+    color: var(--selective-yellow);
+}
+#introduction h3{
+    background-color: var(--selective-yellow);
+    padding: .3rem 1rem;
+    width: max-content;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+#introduction p{
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+#introduction a{
+    background-color: var(--selective-yellow);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+#introduction a:hover{
+    box-shadow: .5rem .5rem black;
+}
+#profile-img-container{
+    background: url('./image/Paul.webp') no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+.navbar{
+    position: fixed;
+    right: 2rem;
+    top: 30vh;
+    bottom: 30vh;
+    background-color: var(--selective-yellow);
+    height: 40vh;
+    padding: 1.5rem 1rem;
+    border-radius: 2rem;
+}
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+}
+.navbar ul li a{
+    color: black;
+    font-size: 1.5rem;
+}
+.navbar ul li a:hover{
+    color: white;
+}
+.navbar ul li a.active{
+    color: white;
+}
+/* END OF INTRO PAGE */
+
+
+/* ABOUT PAGE */
+.page-container{
+    display: grid;
+    grid-template-columns: [nav-section-start] 20% [main-section-start] 72% [navbar-section-start] 8%[navbar-section-end];
+    height: 100vh;
+    position: relative;
+}
+.page-container .img-container{
+    height: 40%;
+    background: url('./image/Paul1.webp') no-repeat;
+    background-size: cover;
+}
+.nav-section{
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+}
+.nav-section .navigation{
+    height: 70%;
+    background-color: var(--selective-yellow);
+    padding: 8rem 0;
+    position: relative;
+}
+.nav-section .navigation ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-section .navigation ul li{
+    font-size: 2rem;
+    list-style: none;
+}
+.nav-section .navigation ul li a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.nav-section .navigation ul li a:hover{
+    color: white;
+}
+.nav-section .navigation ul li a.active{
+    color: white;
+}
+.vl{
+    height: 4.5rem;
+    border-left: 1px solid black;
+}
+.navbar .vl{
+    height: 2.8rem;
+}
+.nav-section .navigation ul li i{
+    position: relative;
+    font-size: 1rem;
+}
+.nav-section .navigation ul li:first-child i{
+    top: 5px;
+}
+.nav-section .navigation ul li:last-child i{
+    bottom: 15px;
+}
+.main-section{
+    padding-left: 10rem;
+    grid-column: 2/3;
+}
+.main-section h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 8rem 0 5rem;
+    padding: 3rem 0;
+    border: .1rem solid black;
+    font-weight: 800;
+}
+.main-section h2{
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+.main-section h2 span{
+    font-weight: bold;
+}
+.main-section p{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+.main-section .container{
+    display: flex;
+    gap: 1.5rem;
+}
+#stats-container{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    height: 30rem;
+    background-color: black;
+}
+.stats{
+    padding: 1rem;
+    border: 1px solid var(--timberwolf);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.stats span{
+    padding: 1.5rem 40%;
+    color: var(--selective-yellow);
+    font-size: 5rem;
+    display: block;
+}
+#what-i-do{
+    width: 40%;
+}
+#what-i-do h3{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+#what-i-do p{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.job-des-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.job-des{
+    width: 75%;
+}
+.job-des h4{
+    font-size: 1.8rem;
+}
+.job-des-container p{
+    font-size: 1.3rem;
+    width: 100%;
+}
+/* END OF ABOUT PAGE */
+
+
+/* RESUME PAGE */
+#resume-container h2{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-bottom: 1rem;
+} 
+#resume-container h3{
+    font-size: 1.5rem;
+    width: 6rem;
+    background-color: var(--selective-yellow);
+    padding: .5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+#resume-container h4{
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+#resume-container hr{
+    border: 1px solid rgb(192, 192, 192);
+    margin-bottom: 2rem;
+}
+
+/*END OF RESUME PAGE */
+
+
+/* PORTFOLIO PAGE */
+#portfolio-h2{
+    text-align: center;
+    font-weight: bold;
+}
+#portfolio-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+#portfolio-container img{
+    width: 25rem;
+}
+
+/*END OF PORTFOLIO PAGE */
+
+
+
+/* TESTIMONIAL PAGE */
+#testimonial-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#Michaelc{
+    color: beige;
+}
+#testimonial-container .testimonial{
+    width: 48%;
+    background-color: black;
+    padding: 2.5rem;
+    display: flex;
+    align-items: start;
+    height: 30vh;
+    gap: 1.5rem;
+    position: relative;
+}
+#testimonial-container .testimonial .client-img-container{
+    min-width: 40%;
+    height: 90%;
+}
+#testimonial-container .testimonial .client-img-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+#testimonial-container .testimonial .review h3{
+    font-size: 2.2rem;
+    color: var(--selective-yellow);
+    margin-bottom: 2rem;
+}
+#testimonial-container .testimonial .review h4{
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+#testimonial-container .testimonial .review p{
+    color: white;
+    font-size: 1.2rem;
+}
+#testimonial-container .testimonial .stars{
+    position: absolute;
+    color: var(--selective-yellow);
+    bottom: 1.2rem;
+    font-size: 1.8rem;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+/*END OF TESTIMONIAL PAGE */
+
+
+/* CONTACT PAGE */
+.contact-info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.contact-info div{
+    width: 46%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-info div div{
+    font-size: 1.8rem;
+    width: max-content;
+}
+.contact-info + h2{
+    font-weight: 800;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+/* END OF CONTACT PAGE */
+
+
+/* MEDIA QUERIES */
+
+/* LARGE SCREEN DEVICES */
+@media screen and (max-width: 1199px) {
+    html{
+        font-size: 48%;
+    }
+    
+    #introduction{
+        padding: 0 4.5rem 0 5rem;
+    }
+    #introduction h1{
+        font-size: 5rem;
+    }
+}
+
+/* MEDIUM SCREEN DEVICES */
+@media (max-width: 800px) {
+    #profile-img-container{
+        background-position: -4rem;
+    }
+    #stats-container{
+        width: 100%;
+    }
+    #what-i-do{
+        width: 100%;
+    }
+    .main-section .container{
+        flex-wrap: wrap;
+    }
+    #testimonial-container .testimonial{
+        width: 100%;
+    }
+    #testimonial-heading{
+        font-size: 7rem;
+    }
+    .contact-info div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
