@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            align-items: stretch;
+        }
+
+        .grid img{
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
@@ -45,6 +59,13 @@
             <h1>Portfolio</h1>
 
             <h2 id="portfolio-h2">Web Design Projects</h2>
+            
+            <main class="grid">
+                <img src="./image/book.jpg" alt="pizza">
+                <img src="./image/book.jpg" alt="pizza">
+                <img src="./image/book.jpg" alt="pizza">
+                <img src="./image/book.jpg" alt="pizza">
+            </main>
 
             <div id="portfolio-container">
                 <div class="box">
